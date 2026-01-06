@@ -16,14 +16,14 @@
     <span class="badge">PREMIUM LANDING PAGES</span>
 
     <h1>
-      בונה דפי נחיתה  
+      דפי נחיתה  
       <span>שמכניסים כסף</span>
     </h1>
 
     <p>
       לא עוד אתר יפה.  
-      דף נחיתה ממוקד, יוקרתי, אגרסיבי –  
-      שממיר גולשים ללקוחות.
+      כלי מכירה מדויק, יוקרתי וממוקד המרות  
+      שמביא פניות אמיתיות.
     </p>
 
     <a href="#contact" class="primary-btn">
@@ -41,7 +41,7 @@
       <h3>דיוק שיווקי</h3>
       <p>
         כל מילה, צבע וכפתור  
-        נבנים במטרה אחת:  
+        נבנים במטרה אחת –  
         לגרום ללקוח לפעול.
       </p>
     </div>
@@ -49,9 +49,9 @@
     <div class="why-card">
       <h3>יוקרה דיגיטלית</h3>
       <p>
-        עיצוב נקי, מודרני, פרימיום –  
-        כזה שמשדר אמינות,  
-        כוח ומקצוענות.
+        עיצוב פרימיום שמשדר  
+        אמינות, כוח  
+        ומקצוענות.
       </p>
     </div>
 
@@ -59,8 +59,8 @@
       <h3>קוד ברמה גבוהה</h3>
       <p>
         HTML / CSS / JS  
-        כתוב נכון, מהיר,  
-        מותאם למובייל ולגוגל.
+        מהיר, נקי  
+        ומותאם למובייל.
       </p>
     </div>
   </div>
@@ -72,8 +72,8 @@
     <h2>סומך עליך</h2>
     <p>
       אני לא בונה “עוד דף”.  
-      אני בונה **כלי מכירה**.  
-      כזה שעובד 24/7 ומביא פניות אמיתיות.
+      אני בונה **מכונת לידים**  
+      שעובדת בשבילך 24/7.
     </p>
   </div>
 </section>
@@ -86,19 +86,74 @@
     <div class="step">
       <span>01</span>
       <h4>אפיון חד</h4>
-      <p>מבינים מי הלקוח ומה מניע אותו לפעול</p>
+      <p>הבנת קהל היעד והמסר</p>
     </div>
 
     <div class="step">
       <span>02</span>
       <h4>עיצוב יוקרתי</h4>
-      <p>נראות שמבדלת אותך מהמתחרים</p>
+      <p>נראות שמבדלת אותך</p>
     </div>
 
     <div class="step">
       <span>03</span>
       <h4>המרות</h4>
-      <p>מבנה שמוביל לפנייה בלי לחשוב פעמיים</p>
+      <p>מבנה שמוביל לפנייה</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <h2>מחירון</h2>
+  <p class="section-sub">מחיר ברור. בלי אותיות קטנות.</p>
+
+  <div class="price-card">
+    <h3>דף נחיתה יוקרתי</h3>
+
+    <div class="price">
+      <span>₪</span>250
+    </div>
+
+    <ul>
+      <li>✔ עיצוב פרימיום</li>
+      <li>✔ מותאם למובייל</li>
+      <li>✔ ממוקד המרות</li>
+      <li>✔ קוד נקי ומהיר</li>
+      <li>✔ חיבור לוואטסאפ</li>
+    </ul>
+
+    <a href="#contact" class="primary-btn">
+      להזמנת דף נחיתה
+    </a>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <h2>דוגמאות דפי נחיתה</h2>
+  <p class="section-sub">עיצוב יוקרתי | חשיבה שיווקית | תוצאות</p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <div class="overlay">
+        <h3>עסק שירותים</h3>
+        <span>המרות גבוהות</span>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="overlay">
+        <h3>מוצר דיגיטלי</h3>
+        <span>פרימיום</span>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="overlay">
+        <h3>קמפיין ממומן</h3>
+        <span>CTA חזק</span>
+      </div>
     </div>
   </div>
 </section>
@@ -113,10 +168,7 @@
   <form class="contact-form" onsubmit="sendWhatsApp(event)">
     <input type="text" id="name" placeholder="שם מלא" required>
     <textarea id="message" placeholder="ספר לי בקצרה מה אתה צריך" required></textarea>
-
-    <button type="submit">
-      שלח הודעה לוואטסאפ
-    </button>
+    <button type="submit">שלח הודעה לוואטסאפ</button>
   </form>
 </section>
 
@@ -127,14 +179,10 @@
 <script>
 function sendWhatsApp(e) {
   e.preventDefault();
-
   const name = document.getElementById("name").value;
   const message = document.getElementById("message").value;
-
   const text = `היי, קוראים לי ${name}%0A%0A${message}`;
-  const phone = "972543821419";
-
-  window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+  window.open(`https://wa.me/972543821419?text=${text}`, "_blank");
 }
 </script>
 
