@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>בניית דפי נחיתה יוקרתיים | סומך עליך</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="badge">PREMIUM LANDING PAGES</span>
+
+    <h1>
+      בונה דפי נחיתה  
+      <span>שמכניסים כסף</span>
+    </h1>
+
+    <p>
+      לא עוד אתר יפה.  
+      דף נחיתה ממוקד, יוקרתי, אגרסיבי –  
+      שממיר גולשים ללקוחות.
+    </p>
+
+    <a href="#contact" class="primary-btn">
+      ליצירת קשר מיידית
+    </a>
+  </div>
+</header>
+
+<!-- WHY -->
+<section class="why">
+  <h2>למה עסקים רציניים בוחרים בי</h2>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>דיוק שיווקי</h3>
+      <p>
+        כל מילה, צבע וכפתור  
+        נבנים במטרה אחת:  
+        לגרום ללקוח לפעול.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>יוקרה דיגיטלית</h3>
+      <p>
+        עיצוב נקי, מודרני, פרימיום –  
+        כזה שמשדר אמינות,  
+        כוח ומקצוענות.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>קוד ברמה גבוהה</h3>
+      <p>
+        HTML / CSS / JS  
+        כתוב נכון, מהיר,  
+        מותאם למובייל ולגוגל.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="trust-box">
+    <h2>סומך עליך</h2>
+    <p>
+      אני לא בונה “עוד דף”.  
+      אני בונה **כלי מכירה**.  
+      כזה שעובד 24/7 ומביא פניות אמיתיות.
+    </p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <h2>איך זה עובד</h2>
+
+  <div class="steps">
+    <div class="step">
+      <span>01</span>
+      <h4>אפיון חד</h4>
+      <p>מבינים מי הלקוח ומה מניע אותו לפעול</p>
+    </div>
+
+    <div class="step">
+      <span>02</span>
+      <h4>עיצוב יוקרתי</h4>
+      <p>נראות שמבדלת אותך מהמתחרים</p>
+    </div>
+
+    <div class="step">
+      <span>03</span>
+      <h4>המרות</h4>
+      <p>מבנה שמוביל לפנייה בלי לחשוב פעמיים</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>ליצירת קשר</h2>
+  <p class="contact-sub">
+    השאר פרטים – ההודעה נשלחת ישירות לוואטסאפ
+  </p>
+
+  <form class="contact-form" onsubmit="sendWhatsApp(event)">
+    <input type="text" id="name" placeholder="שם מלא" required>
+    <textarea id="message" placeholder="ספר לי בקצרה מה אתה צריך" required></textarea>
+
+    <button type="submit">
+      שלח הודעה לוואטסאפ
+    </button>
+  </form>
+</section>
+
+<footer>
+  <p>© סומך עליך | בניית דפי נחיתה</p>
+</footer>
+
+<script>
+function sendWhatsApp(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const message = document.getElementById("message").value;
+
+  const text = `היי, קוראים לי ${name}%0A%0A${message}`;
+  const phone = "972543821419";
+
+  window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+}
+</script>
+
+</body>
+</html>
