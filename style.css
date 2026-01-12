@@ -15,8 +15,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   text-align: center;
+  position: relative;
   background: radial-gradient(circle at top, #1e293b, #020617 70%);
 }
 
@@ -30,7 +30,6 @@ body {
   position: relative;
   max-width: 800px;
   padding: 40px;
-  animation: fadeUp 1.2s ease forwards;
 }
 
 .badge {
@@ -54,6 +53,7 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .primary-btn,
@@ -77,17 +77,15 @@ body {
 /* TRUST */
 .trust {
   padding: 40px 20px;
-  background: #020617;
 }
 
 .trust-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
   max-width: 900px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
   text-align: center;
-  opacity: 0.85;
 }
 
 /* SECTIONS */
@@ -98,37 +96,32 @@ section {
 
 /* WHY */
 .why-grid {
+  max-width: 1100px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
-  max-width: 1100px;
-  margin: auto;
 }
 
 .why-card {
   padding: 35px;
   border-radius: 25px;
   border: 1px solid #1e293b;
-  transition: transform 0.4s;
-}
-
-.why-card:hover {
-  transform: translateY(-10px);
 }
 
 /* PROCESS */
 .steps {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
   justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .step {
-  padding: 30px;
-  border: 1px solid #1e293b;
-  border-radius: 20px;
   width: 220px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #1e293b;
 }
 
 .step span {
@@ -136,44 +129,40 @@ section {
   color: #6366f1;
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO – בלי ריבועים שחורים */
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
   max-width: 1000px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
 .portfolio-item {
-  height: 240px;
+  height: 220px;
   border-radius: 25px;
-  background: linear-gradient(135deg, #1e293b, #020617);
   position: relative;
-  overflow: hidden;
   text-decoration: none;
-  color: white;
 }
 
 .overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(2,6,23,0.85);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.4s;
+  bottom: 20px;
+  right: 20px;
 }
 
-.portfolio-item:hover .overlay {
-  opacity: 1;
+.overlay h3 {
+  margin: 0;
+}
+
+.overlay span {
+  font-size: 0.9rem;
+  color: #c7d2fe;
 }
 
 .overlay button {
-  margin-top: 15px;
-  padding: 12px 30px;
+  margin-top: 10px;
+  padding: 10px 26px;
   border-radius: 30px;
   border: none;
   background: linear-gradient(135deg, #6366f1, #22d3ee);
@@ -185,20 +174,14 @@ section {
 .price-card {
   max-width: 400px;
   margin: auto;
-  border: 1px solid #1e293b;
-  border-radius: 30px;
   padding: 40px;
+  border-radius: 30px;
+  border: 1px solid #1e293b;
 }
 
 .price {
   font-size: 3rem;
   color: #22d3ee;
-  margin: 20px 0;
-}
-
-.price-card ul {
-  list-style: none;
-  padding: 0;
 }
 
 /* CONTACT */
@@ -213,9 +196,9 @@ section {
 .contact-form input,
 .contact-form textarea {
   padding: 16px;
-  background: #020617;
-  border: 1px solid #334155;
   border-radius: 15px;
+  border: 1px solid #334155;
+  background: #020617;
   color: white;
 }
 
@@ -234,18 +217,12 @@ footer {
   color: #94a3b8;
 }
 
-/* ANIMATION */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 /* MOBILE */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
   }
-  .hero-actions {
-    flex-direction: column;
+  section {
+    padding: 70px 15px;
   }
 }
