@@ -16,36 +16,35 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
   background: radial-gradient(circle at top, #1e293b, #020617 70%);
 }
 
-.hero-glow {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(99,102,241,0.25), transparent 60%);
-}
-
 .hero-content {
-  position: relative;
   max-width: 800px;
   padding: 40px;
 }
 
 .badge {
+  display: inline-block;
   padding: 8px 22px;
   border: 1px solid #6366f1;
   border-radius: 30px;
-  display: inline-block;
   margin-bottom: 25px;
 }
 
 .hero h1 {
   font-size: 3.2rem;
+  margin: 0;
 }
 
 .hero h1 span {
   color: #818cf8;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-top: 20px;
 }
 
 .hero-actions {
@@ -53,7 +52,6 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .primary-btn,
@@ -74,117 +72,69 @@ body {
   color: #c7d2fe;
 }
 
-/* TRUST */
-.trust {
-  padding: 40px 20px;
-}
-
-.trust-grid {
-  max-width: 900px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  text-align: center;
-}
-
-/* SECTIONS */
-section {
+/* PORTFOLIO */
+.portfolio {
   padding: 100px 20px;
   text-align: center;
 }
 
-/* WHY */
-.why-grid {
+.section-sub {
+  opacity: 0.7;
+  margin-bottom: 60px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
   max-width: 1100px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
 }
 
-.why-card {
-  padding: 35px;
-  border-radius: 25px;
-  border: 1px solid #1e293b;
-}
-
-/* PROCESS */
-.steps {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.step {
-  width: 220px;
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid #1e293b;
-}
-
-.step span {
-  font-size: 2rem;
-  color: #6366f1;
-}
-
-/* PORTFOLIO – בלי ריבועים שחורים */
-.portfolio-grid {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.portfolio-item {
-  height: 220px;
-  border-radius: 25px;
-  position: relative;
+.portfolio-card {
   text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: transform 0.4s;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+.portfolio-card:hover {
+  transform: translateY(-10px);
 }
 
-.overlay h3 {
+.portfolio-card img {
+  width: 100%;
+  display: block;
+  border-radius: 25px;
+}
+
+.portfolio-info {
+  padding: 20px 10px;
+  text-align: right;
+}
+
+.portfolio-info h3 {
   margin: 0;
+  font-size: 1.3rem;
 }
 
-.overlay span {
-  font-size: 0.9rem;
-  color: #c7d2fe;
+.portfolio-info p {
+  margin: 8px 0;
+  opacity: 0.8;
 }
 
-.overlay button {
-  margin-top: 10px;
-  padding: 10px 26px;
-  border-radius: 30px;
-  border: none;
-  background: linear-gradient(135deg, #6366f1, #22d3ee);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* PRICING */
-.price-card {
-  max-width: 400px;
-  margin: auto;
-  padding: 40px;
-  border-radius: 30px;
-  border: 1px solid #1e293b;
-}
-
-.price {
-  font-size: 3rem;
+.portfolio-info span {
   color: #22d3ee;
+  font-weight: bold;
 }
 
 /* CONTACT */
+.contact {
+  padding: 100px 20px;
+  text-align: center;
+}
+
 .contact-form {
   max-width: 500px;
   margin: auto;
@@ -196,9 +146,9 @@ section {
 .contact-form input,
 .contact-form textarea {
   padding: 16px;
-  border-radius: 15px;
-  border: 1px solid #334155;
   background: #020617;
+  border: 1px solid #334155;
+  border-radius: 15px;
   color: white;
 }
 
@@ -208,6 +158,7 @@ section {
   border: none;
   background: linear-gradient(135deg, #22d3ee, #6366f1);
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -217,12 +168,33 @@ footer {
   color: #94a3b8;
 }
 
+/* FADE */
+.fade {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
   }
-  section {
-    padding: 70px 15px;
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .portfolio-info {
+    text-align: center;
   }
 }
